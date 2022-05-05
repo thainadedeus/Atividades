@@ -1,0 +1,26 @@
+#main {
+	max-width: 1024px;
+	margin: 0 auto;
+	font-family:'Courier New', Courier, monospace
+}	
+#foto {
+	text-align: center;
+}
+#informacoes-gerais {
+	text-align: center;
+	font-family:'Courier New', Courier, monospace
+}
+h1 {
+	text-align: center;
+	color:darkblue;
+	font-family:'Courier New', Courier, monospace
+}
+h2 {
+	color:dimgray;
+	font-family:'Courier New', Courier, monospace
+}
+h4 {
+	color:dimgray;
+	margin:5px;
+	font-family:'Courier New', Courier, monospace
+}
