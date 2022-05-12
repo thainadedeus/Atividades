@@ -1,26 +1,40 @@
 #main {
 	max-width: 1024px;
 	margin: 0 auto;
-	font-family:'Courier New', Courier, monospace
+	font-family:'Roboto';
 }	
 #foto {
 	text-align: center;
 }
 #informacoes-gerais {
 	text-align: center;
-	font-family:'Courier New', Courier, monospace
+	font-family: 'Roboto';
 }
 h1 {
 	text-align: center;
 	color:darkblue;
-	font-family:'Courier New', Courier, monospace
+	font-family: 'Roboto';
 }
 h2 {
-	color:dimgray;
-	font-family:'Courier New', Courier, monospace
+	color:darkblue;
+	font-family:'Roboto';
 }
 h4 {
-	color:dimgray;
+	color:darkblue;
 	margin:5px;
-	font-family:'Courier New', Courier, monospace
+	font-family:'Roboto';
+}
+#aumentar-currículo {
+	background-color: blue;
+	color: white;
+	border: solid 2px black;
+	font-size: 2em;
+}
+
+#texto {
+	width: 90%;
+	height: 50px;
+	border: solid 2px black;
+	font-size: 2em;
+
 }
