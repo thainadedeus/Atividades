@@ -87,13 +87,13 @@ app.get('/curriculo', (req, res) => {
 		'*');
 
 	var db = new sqlite3.Database(DBPATH);
-	var sql = 'SELECT * FROM tbUser WHERE userId = 2';
+	var sql = 'SELECT * FROM tbUser WHERE projeto = 0';
 	db.get(sql, [], (err, row) => {
 		if (err) {
 			throw err;
 		}
 		else console.log(sql);
-		res.write('teste');
+		res.write('index');
 
 	})
 })
