@@ -1,0 +1,18 @@
+<%- include("../cabecalho") %>
+
+
+<div id="curriculo">
+	<% for (const itens of model) { %>
+		
+
+		
+		<%= itens.idCurriculo %> : <%= itens.item %> - <%= itens.descricao %> |
+		<a 
+		
+			href="/curriculo/alterar?idCurriculo=<%= itens.idCurriculo %>">ALTERAR</a> |
+		<a href="/curriculo/remover?idCurriculo=<%= itens.idCurriculo %>">REMOVER</a>
+	</p>
+	<% } %>
+</div>
+
+<%- include("../rodape") %>
