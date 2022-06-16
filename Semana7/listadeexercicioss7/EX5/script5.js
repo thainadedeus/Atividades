@@ -1,12 +1,62 @@
-function adicionar() {
-    var nome= document.getElementById('nome').value;
-    var nota = document.getElementById('nota').value;
-    var nota2 = document.getElementById('nota2').value;
+function Calcular(){
+    var numeroalunos = Number(document.getElementById("numeroalunos").value);
+    var notaprova = (document.getElementById("notaprova").value).split(",");
+    var notatrabalho = (document.getElementById("notatrabalho").value).split(",");
 
-    document.getElementById('vem').innerHTML += nome + " " + nota + " " + nota2 + " ";
+    class Aluno{
+    constructor(
+        nome,
+        notaprova,
+        notatrabalho,
+        media, 
+    ){
+        this.nome = nome;
+        this.notaprova = notaprova;
+        this.notatrabalho = notatrabalho;
+        this.media = media;
+    }
+    }
 
-    var media = (2*nota + 3*nota2) / 5
-    document.getElementById('vem').innerHTML += " A média foi: " + media + " ";
+    var listaAlunos = []
 
-    
-}
+    for (var i = 0; i <= numeroalunos -1; i++){
+        var aluno = new Aluno(
+            `aluno${i}`,
+            Number(notaprova[i]),
+            Number(notatrabalho[i]),
+            ((Number(notaprova[i])*2)+(Number(notatrabalho[i])*3))/2
+        )
+        listaAlunos.push(aluno)
+        }
+
+        var valorprova = 0
+        var valortrabalho = 0
+
+    for (var j = 0; j < notaprova.length; j++){
+        valorprova += Number(notaprova[j])
+    }
+
+    for (var k = 0; k < notatrabalho.length; k++){
+        valortrabalho += Number(notatrabalho[k])
+    }
+
+        var prova = valorprova/numeroalunos
+        var trabalho = valortrabalho/numeroalunos
+        var geral = (prova + trabalho)/ 2
+
+        document.getElementById('geral').innerHTML = geral;
+        document.getElementById('trabalhos').innerHTML = prova;
+        document.getElementById('provas').innerHTML = trabalho;
+
+        var maiortrabalho = Math.max(...notatrabalho)
+        document.getElementById('maiortrabalho').innerHTML = maiortrabalho
+
+        var menortrabalho = Math.min(...notatrabalho)
+        document.getElementById('menortrabalho').innerHTML = menortrabalho
+
+        var maiorprova = Math.max(...notaprova)
+        document.getElementById('maiorprova').innerHTML = maiorprova
+
+        var menorprova = Math.min(...notaprova)
+        document.getElementById('menorprova').innerHTML = menorprova
+} 
